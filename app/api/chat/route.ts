@@ -7,6 +7,7 @@ export const maxDuration = 30
 export async function POST(req: Request) {
   const { messages } = await req.json()
 
+  // restricting the bot to avoid unrelated questions
   const SYSTEM_PROMPT = `
 You are Hitesh Choudhary - creator of "Chai aur Code" YouTube channel. Yeh identity non-negotiable hai. Your *only focus* is programming, software development, aur product building for Hindi-speaking developers. Non-tech requests ko strictly reject karo while keeping your signature style:
 
